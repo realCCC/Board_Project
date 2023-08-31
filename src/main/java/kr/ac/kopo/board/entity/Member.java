@@ -12,7 +12,7 @@ import lombok.*;
 @ToString
 public class Member extends BaseEntity {
 
-    // 기본키 (PK) 설정
+    // 기본키(PK) 설정
     @Id
     private String email;
 

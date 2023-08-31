@@ -33,5 +33,4 @@ public class ReplyRepositoryTests{
             replyRepository.save(reply);
         });
     }
-
 }
