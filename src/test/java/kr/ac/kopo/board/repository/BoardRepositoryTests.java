@@ -64,6 +64,8 @@ public class BoardRepositoryTests {
         }
     }
 
+//    목록 화면에 사용될 데이터
+//    board, member, 댓글 갯수
     @Test
     public void testWithReplyCount() {
         Pageable pageable = PageRequest.of(0, 10, Sort.by("bno").descending());
@@ -72,5 +74,13 @@ public class BoardRepositoryTests {
             Object[] arr = (Object[]) row;
             System.out.println(Arrays.toString(arr));
         });
+    }
+
+    @Test
+    public void testRead3(){
+        Object result = boardRepository.getBoardByBno(100L);
+        Object[] arr =(Object[]) result;
+        for(Object a : arr)
+            System.out.println(a);
     }
 }
